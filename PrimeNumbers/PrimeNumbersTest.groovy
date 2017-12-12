@@ -41,5 +41,7 @@ class PrimeNumbersTests extends GroovyTestCase {
     	assert result == "2, 2, 3, 3, 5"
     	result = primeNumbers.calculate(200)
     	assert result == "2, 2, 2, 5, 5"
+    	result = primeNumbers.calculate(1000000)
+    	assert result == "2, 2, 2, 2, 2, 2, 5, 5, 5, 5, 5"
     }
 }
