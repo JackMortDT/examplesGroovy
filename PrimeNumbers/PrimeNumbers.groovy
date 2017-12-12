@@ -1,12 +1,15 @@
 class PrimeNumbers{
     def calculate(int number){
-        int i = 0
+        addPrimeFactorToCadena(number)
+    }
+
+    private def addPrimeFactorToCadena(int number){
         int divisor = 2
         def cadena = []
-        for(i = -2; i <= number; i++){
+        for(def i = -2; i <= number; i++){
             if(number % divisor == 0){
                 cadena.add(divisor)
-                number = number/divisor    
+                number = number/divisor
             }
             else divisor++
         }
