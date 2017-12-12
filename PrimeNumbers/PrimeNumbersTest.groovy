@@ -33,4 +33,13 @@ class PrimeNumbersTests extends GroovyTestCase {
         result = primeNumbers.calculate(171)
         assert result == "3, 3, 19"
     }
+
+    void testCalculateSomeNumbersOfPrimeFactors(){
+    	def result = primeNumbers.calculate(140)
+    	assert result == "2, 2, 5, 7"
+    	result = primeNumbers.calculate(180)
+    	assert result == "2, 2, 3, 3, 5"
+    	result = primeNumbers.calculate(200)
+    	assert result == "2, 2, 2, 5, 5"
+    }
 }
