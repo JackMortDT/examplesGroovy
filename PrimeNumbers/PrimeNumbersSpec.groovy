@@ -3,7 +3,7 @@ import spock.lang.*
 
 class PrimeNumbersSpec extends Specification {
 
-    def primeNumbers = new PrimeNumbers()
+    PrimeNumbers primeNumbers = new PrimeNumbers()
     
     void "Calculate the prime factors of a number"(){
         given:"A number"
