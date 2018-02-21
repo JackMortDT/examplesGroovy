@@ -7,9 +7,9 @@ class PrimeNumbersSpec extends Specification {
     
     void "Calculate the prime factors of a number"(){
         given:"A number"
-            def number = row
+            Integer number = row
         when:
-            def result = primeNumbers.calculate(number)
+            String result = primeNumbers.calculate(number)
         then:
             result == expect
         where:
