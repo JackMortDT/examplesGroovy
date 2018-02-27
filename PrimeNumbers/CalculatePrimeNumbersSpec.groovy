@@ -15,7 +15,7 @@ class PrimeNumbersSpec extends Specification {
             result == expect
         where:
             row     || expect
-            1       || "1 no es primo"
+            1       || "1 is not prime"
             2       || "2"
             3       || "2, 3"
             10      || "2, 3, 5, 7"
