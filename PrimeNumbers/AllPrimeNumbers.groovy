@@ -4,7 +4,7 @@ if(numberReceived == 1)
   println("${numberReceived} No es primo")
 
 else if(numberReceived == 2) 
-  println("${numberReceived} Es primo")
+  println("2")
 
 else{
     List<Integer> listOfNumbers = []
