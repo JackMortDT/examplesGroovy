@@ -17,7 +17,7 @@ class CalculatePrimeNumbers{
       listOfNumbers.join(", ")
   }
 
-  def dividingNumber(Integer iteratedNumber, List<Integer> listOfNumbers){
+  List<Integer> dividingNumber(Integer iteratedNumber, List<Integer> listOfNumbers){
     Integer counter = 0
     Integer currentNumber = 0
     (1..iteratedNumber).each{ divider -> 
