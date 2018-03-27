@@ -1,3 +1,25 @@
-# Ejemplos varios con groovy
+# Some examples with groovy
 
-Groovy usa una sintaxis muy parecida a Java, comparte el mismo modelo de objetos, de hilos y de seguridad. Desde Groovy se puede acceder directamente a todas las API existentes en Java. El bytecode generado en el proceso de compilación es totalmente compatible con el generado por el lenguaje Java para la Java Virtual Machine (JVM), por tanto puede usarse directamente en cualquier aplicación Java. Todo lo anterior unido a que la mayor parte de código escrito en Java es totalmente válido en Groovy hacen que este lenguaje sea de muy fácil adopción para programadores Java; la curva de aprendizaje se reduce mucho en comparación con otros lenguajes que generan bytecode para la JVM, tales como Jython o JRuby. Groovy puede usarse también de manera dinámica como un lenguaje de scripting.
+Apache Groovy is an object-oriented programming language for the Java platform. It is a dynamic language with features similar to those of Python, Ruby, Perl, and Smalltalk. It can be used as a scripting language for the Java Platform, is dynamically compiled to Java virtual machine (JVM) bytecode, and interoperates with other Java code and libraries. Groovy uses a Java-like curly-bracket syntax. Most Java code is also syntactically valid Groovy, although semantics may be different.
+
+## Prerequisites
+
+* [Java]('http://www.oracle.com/technetwork/es/java/javase/downloads/index.html') 
+* [Groovy]('http://groovy-lang.org/')
+
+## Installation
+
+### SDKMAN
+
+* `curl -s get.sdkman.io | bash`
+* `source "$HOME/.sdkman/bin/sdkman-init.sh"`
+* `sdk install groovy`
+* `groovy -version`
+
+## Groovy Shell
+
+* `groovysh`
+
+## Groovy Console
+
+* `groovyConsole`
