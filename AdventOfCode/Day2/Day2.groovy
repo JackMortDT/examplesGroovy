@@ -1,5 +1,5 @@
 class Day2 {
-	Integer calculateWrapper(def dimension){
+	Integer calculateWrapper(String dimension){
 		List listOfOperation = getTheListOfOperations(dimension)
 		List totalListOfWrapper = []
 		listOfOperation.each{ addition ->
@@ -8,7 +8,7 @@ class Day2 {
 		totalListOfWrapper.sum()
 	}
 
-	Integer calculateRibbon(def dimension){
+	Integer calculateRibbon(String dimension){
 		List listOfOperation = getTheListOfOperations(dimension)
 		List totalListOfRibbon = []
 		listOfOperation.each{ addition ->
@@ -17,7 +17,7 @@ class Day2 {
 		totalListOfRibbon.sum()
 	}
 
-	List getTheListOfOperations(def dimension){
+	List getTheListOfOperations(String dimension){
 		List listOfArrays = []
 		dimension.eachLine{ operation ->
      	listOfArrays << operation.split('x').collect{ it as Integer }

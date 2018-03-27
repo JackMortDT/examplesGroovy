@@ -15,7 +15,7 @@ class Day2Test extends GroovyTestCase {
 	}
 
 	void testForCalculateTotalOfWrapper(){
-		File dimension = new File('Day2.txt')
+		String dimension = new File('Day2.txt').text
 		Integer result = day2.calculateWrapper(dimension)
 		assert result == 1586300
 	}
@@ -33,7 +33,7 @@ class Day2Test extends GroovyTestCase {
 	}
 
 	void testForCalculateTotalOfRibbon(){
-		File dimension = new File('Day2.txt')
+		String dimension = new File('Day2.txt').text
 		Integer result = day2.calculateRibbon(dimension)
 		assert result == 3737498	
 	}
