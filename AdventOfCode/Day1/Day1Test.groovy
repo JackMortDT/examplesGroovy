@@ -9,9 +9,9 @@ class Day1Test extends GroovyTestCase {
 	}
 
 	void testOftheSecondCaseOfFloorsOfSanta(){
-		String floors = "(())"
+		String floors = "))((((("
 		Integer result = day1.floorWhereIsSanta(floors)
-		assert result == 0
+		assert result == 3
 	}
 
 	void testOftheRealCaseOfFloorsOfSanta(){
