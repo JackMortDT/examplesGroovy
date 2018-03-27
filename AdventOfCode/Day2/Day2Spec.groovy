@@ -1,5 +1,5 @@
-@Grab(group='org.spockframework', module='spock-core', version='0.7-groovy-2.0')
-import spock.lang.*
+@Grab(group='org.spockframework', module='spock-core', version='1.1-groovy-2.4')
+import spock.lang.Specification
 
 class Day2Spec extends Specification {
 
