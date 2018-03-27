@@ -1,20 +1,41 @@
-File paragraph = new File('/home/luis/Repos/Groovy/examplesGroovy/AdventOfCode/Day2.txt')
+class Day2 {
+	Integer calculateWrapper(def dimension){
+		List listOfOperation = getTheListOfOperations(dimension)
+		List totalListOfWrapper = []
+		listOfOperation.each{ addition ->
+   		totalListOfWrapper << totalOfRibbon(addition)
+		}
+		totalListOfWrapper.sum()
+	}
 
-List listOfArrays = []
-paragraph.eachLine{ operation ->
-     listOfArrays << operation.split('x').collect{ it as Integer }
-}
+	Integer calculateRibbon(def dimension){
+		List listOfOperation = getTheListOfOperations(dimension)
+		List totalListOfRibbon = []
+		listOfOperation.each{ addition ->
+   		totalListOfRibbon << sideOfWrapper(addition)
+		}
+		totalListOfRibbon.sum()
+	}
 
-List totalListOfWrapper = []
-List totalListOfRibbon = []
-Integer l, w, h, side1, side2, side3, smallSideOfWrapper, total, minPerimeter
-listOfArrays.each{ addition ->
-   l = addition[0]; w = addition[1]; h = addition[2]
-   side1 = l*w; side2 = w*h; side3 = h*l
-   smallSideOfWrapper = [l * w, w * h, h * l].min()
-   minPerimeter = [2*l + 2*w, 2*w + 2*h, 2*h + 2*l].min()
-   totalListOfRibbon << (l * w * h + minPerimeter)
-   totalListOfWrapper << (2*side1 + 2*side2 + 2*side3 + smallSideOfWrapper) 
+	List getTheListOfOperations(def dimension){
+		List listOfArrays = []
+		dimension.eachLine{ operation ->
+     	listOfArrays << operation.split('x').collect{ it as Integer }
+		}
+	}
+
+	Integer sideOfWrapper(List addition){
+		Integer l, w, h, minPerimeter
+		l = addition[0]; w = addition[1]; h = addition[2]
+   	minPerimeter = [2*l + 2*w, 2*w + 2*h, 2*h + 2*l].min()
+		(l * w * h + minPerimeter)
+	}
+
+	Integer totalOfRibbon(List addition){
+		Integer l, w, h, side1, side2, side3, smallSideOfWrapper
+		l = addition[0]; w = addition[1]; h = addition[2]
+   	side1 = l*w; side2 = w*h; side3 = h*l
+   	smallSideOfWrapper = [l * w, w * h, h * l].min()
+   	(2*side1 + 2*side2 + 2*side3 + smallSideOfWrapper) 
+	}
 }
-println "Total of wrapper: ${totalListOfWrapper.sum()}"
-println "Total of ribbon: ${totalListOfRibbon.sum()}"
