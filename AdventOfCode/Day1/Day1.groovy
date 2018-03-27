@@ -1,17 +1,33 @@
-String floors = new File('Day1.txt').text
+class Day1 {
+  Integer floorWhereIsSanta(String floors){
+    Integer counter = 0
+    List level = []
 
-Integer counter = 0
-List level = []
-
-Integer aux = 0
-floors.each{ floor ->
-    if(floor == "(") counter++
-    else{
+    Integer aux = 0
+    floors.each{ floor ->
+      if(floor == "(") counter++
+      else{
         counter--
         if(counter == -1) level << aux+1
+      }
+      aux++
     }
-    aux++
-}
+    counter
+  }
 
-println counter
-println level?level[0]:"Santa never went to the basement D:"
+  Integer firsBasementFloorInTheSantasTrip(String floors){
+    Integer counter = 0
+    List level = []
+
+    Integer aux = 0
+    floors.each{ floor ->
+      if(floor == "(") counter++
+      else{
+        counter--
+        if(counter == -1) level << aux+1
+      }
+      aux++
+    }
+    level?level[0]:"Santa never went to the basement D:"
+  }
+}
