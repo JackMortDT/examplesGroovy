@@ -28,6 +28,6 @@ class Day1 {
       }
       aux++
     }
-    level?level[0]:"Santa never went to the basement D:"
+    level?level[0]:0
   }
 }
