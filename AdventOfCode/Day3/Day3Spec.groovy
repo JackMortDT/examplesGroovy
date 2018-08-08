@@ -13,8 +13,10 @@ class Day3Spec extends Specification{
     then:
       assert totalTraveled == results
     where:
-      routes || results
-      ">"    || 2
-      "^>v<" || 4
+      routes                    || results
+      ">"                       || 2
+      "^>v<"                    || 4
+      "^v^v^v^v^v"              || 2
+      new File('Day3.txt').text || 2592
   }
 }
